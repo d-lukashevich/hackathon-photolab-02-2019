@@ -2,15 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store/initStore';
+
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
 import './index.css';
 
 import { default as Router } from './router/index';
 
 import * as serviceWorker from './serviceWorker';
 
+const MUITheme = createMuiTheme({ palette: { type: 'dark' } });
+
 ReactDOM.render(
     <Provider store={store}>
-        <Router />
+        <ThemeProvider theme={MUITheme}>
+            <Router />
+        </ThemeProvider>
     </Provider>,
     document.getElementById('root')
 );

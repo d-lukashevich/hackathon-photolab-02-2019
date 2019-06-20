@@ -13,7 +13,7 @@ const TableWrapper = styled.div`
 const StyledChooseLink = styled.span`
     display: inline-block;
     font-weight: bold;
-    color: orange;
+    color: #009688;
     cursor: pointer;
     transition: transform 0.3s;
     &:hover {
@@ -22,12 +22,11 @@ const StyledChooseLink = styled.span`
 `;
 
 const StyledTitle = styled.span`
-    color: green;
     ${({ active }) =>
         active &&
         css`
             font-weight: bold;
-            color: darkred;
+            color: #009688;
         `}}
 `;
 
