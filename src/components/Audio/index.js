@@ -23,7 +23,6 @@ class Audio extends Component {
         const { actions, currentShow } = this.props;
         const audioPlayer = this.audioRef.current;
         this.interval = setInterval(() => {
-            console.log(currentShow);
             if (!audioPlayer.paused) actions.changeStatuses({ [currentShow]: audioPlayer.currentTime });
         }, 1000);
     };
